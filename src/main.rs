@@ -6,9 +6,9 @@ mod demo04;
 mod demo05;
 
 fn main() {
-  // demo01::run();
+  demo01::run();
   // demo02::run();
   // demo03::run();
   // demo04::run();
-  demo05::run();
+  // demo05::run();
 }
