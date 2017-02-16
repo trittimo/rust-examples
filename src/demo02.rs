@@ -1,5 +1,5 @@
 #[allow(dead_code)]
-fn main() {
+pub fn main() {
   println!("REFERENCES...");
 
   // Here we have a mutable reference (i.e. we can change what the reference is looking at)

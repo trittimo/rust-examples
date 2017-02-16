@@ -24,7 +24,7 @@ impl Square {
 }
 
 #[allow(dead_code)]
-fn main() {
+pub fn main() {
   println!("FUNCTIONS...");
 
 

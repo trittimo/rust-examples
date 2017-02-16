@@ -11,7 +11,7 @@ struct Square {
 struct Color(i32, i32, i32);
 
 #[allow(dead_code)]
-fn main() {
+pub fn main() {
   println!("STRUCTS...");
 
   
