@@ -18,17 +18,12 @@ pub fn main() {
   // In order to prevent use after free errors, rust has taken a hard stance on how and when
   // you can use your variables
   let myvar = String::from("Hello world");
-  {
-
-    // Because we've used myvar in this new scope, it's permanently bound to this scope (unless we explicitly give it back)
-    // This means that myvar will be permanently dead after the end of this block
-    let myvarinst = myvar;
-    println!("I own myvar now: {}", myvarinst);
-
-    // Goodbye myvar!
-  }
-
-  // println!("myvar after moved into new scope: {}", myvar);
+  // Since we've moved myvar into a new variable, we are unable to use it later
+  // This prevents us from having two of the same 'object'
+  // let mynewvar = myvar;
+  // println!("mynewvar is {}", mynewvar);
+  
+  println!("myvar after moved into new variable: {}", myvar);
 
 
   // The same thing happens with functions
@@ -46,4 +41,10 @@ pub fn main() {
 
   // no_destroy(myrefvar);
   // println!("myrefvar after it was used by no_destroy: {}", myrefvar);
+
+  // The rule is that we can have any number of immutable references
+  // at any given time
+  // However, there can not be any immutable references if there is a single
+  // mutable reference, and there is only one mutable reference allowed at
+  // any given time
 }

@@ -13,11 +13,12 @@ impl Square {
     Square { width: w, height: h }
   }
 
-  // Just syntactic sugar
+  // Just syntactic sugar for get_area(self: &Square)
   fn get_area(&self) -> i32 {
     return self.width * self.height;
   }
 
+  // Just syntactic sugar for get_area(self: &mut Square)
   fn set_width(&mut self, w: i32) {
     self.width = w;
   }
