@@ -3,7 +3,6 @@ struct Square {
   height: i32
 }
 
-// Be careful how you pass things!
 fn get_area(square: &Square) -> i32 {
   return square.width * square.height;
 }

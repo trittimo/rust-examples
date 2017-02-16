@@ -23,6 +23,8 @@ pub fn main() {
   println!("r: {}, g: {}, b: {}", black.0, black.1, black.2);
 
   // Mutability property of the binding
+  // However, this only works because this scope 'owns' black
+  // More on that in demo05
   let mut black = black;
   black.0 = 5;
   println!("r: {}, g: {}, b: {}", black.0, black.1, black.2);
