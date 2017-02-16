@@ -12,7 +12,7 @@ fn no_destroy(val: &String) {
 }
 
 #[allow(dead_code)]
-pub fn run() {
+fn main() {
   println!("OWNERSHIP...");
 
   // In order to prevent use after free errors, rust has taken a hard stance on how and when

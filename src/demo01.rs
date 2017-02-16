@@ -1,5 +1,5 @@
 #[allow(dead_code)]
-pub fn run() {
+fn main() {
   println!("VARIABLES...");
   let myvar = 3;
 
